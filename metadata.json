@@ -1,0 +1,9 @@
+{
+  "name": "Remix: Remix: Remix: Remix: Remix: Remix: AgriSmart AI: Smart Farming Assistant",
+  "description": "A comprehensive AI-powered mobile platform for farmers to predict yields, detect diseases, and optimize resource management.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}

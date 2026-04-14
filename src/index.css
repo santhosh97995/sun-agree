@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-agri-green: #22c55e;
+  --color-agri-light: #f0fdf4;
+  --color-agri-soft: #dcfce7;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-stone-900 bg-white overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-xl bg-white/80 border border-white shadow-lg;
+  }
+  
+  .card-shadow {
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 4px 10px -5px rgba(0, 0, 0, 0.02);
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Safe Area Insets for Mobile */
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Mobile-specific adjustments */
+  @media (max-width: 768px) {
+    body {
+      @apply overflow-y-auto;
+    }
+  }
+}
